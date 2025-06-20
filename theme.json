@@ -1,0 +1,225 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"useRootPaddingAwareAlignments": true,
+		"layout": {
+			"contentSize": "840px",
+			"wideSize": "1100px"
+		},
+		"color": {
+			"defaultPalette": true,
+			"defaultGradients": false,
+			"palette": [
+				{
+					"color": "#353B3C",
+					"name": "Onyx",
+					"slug": "base"
+				},
+				{
+					"color": "#EEF0F2",
+					"name": "Anti-flash White",
+					"slug": "contrast"
+				},
+				{
+					"color": "#FF7F51",
+					"name": "Coral",
+					"slug": "accent-1"
+				},
+				{
+					"color": "#658E9C",
+					"name": "Air Force Blue",
+					"slug": "accent-2"
+				},
+				{
+					"color": "#946E83",
+					"name": "Mountbatten Pink",
+					"slug": "accent-3"
+				}
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Cormorant",
+							"fontStyle": "normal",
+							"fontWeight": "300 400 500 700",
+							"src": [
+								"file:./assets/fonts/Cormorant/Cormorant-VariableFont_wght.ttf"
+							]
+						},
+						{
+							"fontFamily": "Cormorant",
+							"fontStyle": "italic",
+							"fontWeight": "300 400 500 700",
+							"src": [
+								"file:./assets/fonts/Cormorant/Cormorant-Italic-VariableFont_wght.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Cormorant\", serif",
+					"name": "Cormorant",
+					"slug": "heading"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Raleway",
+							"fontStyle": "normal",
+							"fontWeight": "300 400 500 700",
+							"src": [
+								"file:./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf"
+							]
+						},
+						{
+							"fontFamily": "Raleway",
+							"fontStyle": "italic",
+							"fontWeight": "300 400 500 700",
+							"src": [
+								"file:./assets/fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Raleway\", sans-serif",
+					"name": "Raleway",
+					"slug": "body"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": {
+						"min": "0.85rem",
+						"max": "0.9rem"
+					},
+					"name": "Small",
+					"size": "0.9rem",
+					"slug": "small"
+				},
+				{
+					"fluid": {
+						"min": "0.9rem",
+						"max": "1.05rem"
+					},
+					"name": "Medium",
+					"size": "1.05rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "1rem",
+						"max": "1.85rem"
+					},
+					"name": "Large",
+					"size": "1.85rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"min": "1.85rem",
+						"max": "2.5rem"
+					},
+					"name": "Extra Large",
+					"size": "2.5rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"min": "2.5rem",
+						"max": "3.27rem"
+					},
+					"name": "Extra Extra Large",
+					"size": "3.27rem",
+					"slug": "xx-large"
+				}
+			]
+		}
+	},
+	"styles": {
+		"spacing": {
+			"blockGap":"1.2rem",
+			"padding": {
+				"left":"2rem",
+				"right":"2rem"
+			}
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|body",
+			"fontSize": "var:preset|font-size|medium",
+			"fontStyle": "normal",
+			"fontWeight": "400"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xx-large",
+					"lineHeight": "1.15",
+					"letterSpacing":"0.1em",
+					"textTransform":"uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|x-large"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "var:preset|font-size|large",
+					"fontStyle": "italic"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "var:preset|font-size|medium"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "var:preset|font-size|medium",
+					"fontStyle": "italics"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|heading",
+					"fontWeight": "400"
+				}
+			},
+			"link": {
+				":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
+				"color": {
+					"text": "var:preset|color|contrast"
+				}
+			}
+		},
+		"color": {
+			"background":"var:preset|color|base",
+			"text":"var:preset|color|contrast"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
+		}
+	]
+}

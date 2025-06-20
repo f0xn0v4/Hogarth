@@ -1,0 +1,92 @@
+div.wp-site-blocks{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header{
+    grid-area: header;
+}
+
+header div.wp-block-columns div.wp-block-column h1.wp-block-site-title {
+    word-wrap: break-word;
+}
+
+body.home header div.wp-block-columns div.wp-block-column h1.wp-block-site-title {
+    display: none;
+}
+
+
+footer {
+    grid-area: footer;
+}
+
+div.wp-site-blocks :not(header):not(footer) {
+    grid-area: main;
+}
+
+body.home div.wp-block-cover li {
+    margin: 0 1rem;
+}
+
+div.wp-block-navigation__responsive-container {
+    color: var(--wp--preset--color--contrast) !important;
+    background-color: var(--wp--preset--color--base) !important;
+}
+
+div.wp-block-group.hogarth-card{
+    display: block;
+    position: relative;
+}
+
+div.wp-block-group.hogarth-card:not(:has(figure)) {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+
+div.wp-block-group.hogarth-card:not(:has(figure)) div{
+    opacity: 1;
+}
+
+div.wp-block-group.hogarth-card figure img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+div.wp-block-group.hogarth-card div {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+
+li:nth-child(3n+1) .wp-block-f0xn0v4-masonry-query__card{
+    background-color: var(--wp--preset--color--accent-1);
+}
+
+li:nth-child(3n+2) .wp-block-f0xn0v4-masonry-query__card{
+    background-color: var(--wp--preset--color--accent-2);
+}
+
+li:nth-child(3n+0) .wp-block-f0xn0v4-masonry-query__card{
+    background-color: var(--wp--preset--color--accent-3);
+}
+
+div.wp-block-group.hogarth-card:hover div {
+    opacity: 1;
+}
+
+div.hogarth-artwork-details figure.wp-block-table table td {
+    border: none;
+}
