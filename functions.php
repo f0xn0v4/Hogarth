@@ -16,6 +16,7 @@ function prevent_future_type( $post_data ) {
 }
 
 add_action('wp_enqueue_scripts', 'hogarth_enqueue_styles');
+
 add_action('template_redirect', function () {
     // Check if the current page is the "blog" category archive
     if (is_category('blog')) {
@@ -37,10 +38,11 @@ add_action('template_redirect', function () {
         }
     }
 });
+
 add_action('template_redirect', function () {
-    // Check if the current page is the "blog" category archive
+    // Check if the current page is the "event" category archive
     if (is_category('event')) {
-        // Query for a page with the title "Blog"
+        // Query for a page with the title "Events"
         $query = new WP_Query([
             'post_type'      => 'page',
             'title'          => 'Events',
@@ -58,10 +60,11 @@ add_action('template_redirect', function () {
         }
     }
 });
+
 add_action('template_redirect', function () {
-    // Check if the current page is the "blog" category archive
+    // Check if the current page is the "artwork" category archive
     if (is_category('artwork')) {
-        // Query for a page with the title "Blog"
+        // Query for a page with the title "Gallery"
         $query = new WP_Query([
             'post_type'      => 'page',
             'title'          => 'Gallery',
@@ -79,6 +82,7 @@ add_action('template_redirect', function () {
         }
     }
 });
+
 add_filter('wp_insert_post_data', 'prevent_future_type');
 remove_action('future_post', '_future_post_hook');
 
