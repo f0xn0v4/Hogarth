@@ -1,15 +1,9 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"settings": {
-		"useRootPaddingAwareAlignments": true,
-		"layout": {
-			"contentSize": "840px",
-			"wideSize": "1100px"
-		},
 		"color": {
-			"defaultPalette": true,
 			"defaultGradients": false,
+			"defaultPalette": true,
 			"palette": [
 				{
 					"color": "#353B3C",
@@ -38,9 +32,13 @@
 				}
 			]
 		},
+		"layout": {
+			"contentSize": "840px",
+			"wideSize": "1100px"
+		},
 		"typography": {
-			"fluid": true,
 			"defaultFontSizes": false,
+			"fluid": true,
 			"fontFamilies": [
 				{
 					"fontFace": [
@@ -92,8 +90,8 @@
 			"fontSizes": [
 				{
 					"fluid": {
-						"min": "0.85rem",
-						"max": "0.9rem"
+						"max": "0.9rem",
+						"min": "0.85rem"
 					},
 					"name": "Small",
 					"size": "0.9rem",
@@ -101,8 +99,8 @@
 				},
 				{
 					"fluid": {
-						"min": "0.9rem",
-						"max": "1.05rem"
+						"max": "0.95rem",
+						"min": "0.9rem"
 					},
 					"name": "Medium",
 					"size": "1.05rem",
@@ -110,8 +108,8 @@
 				},
 				{
 					"fluid": {
-						"min": "1rem",
-						"max": "1.85rem"
+						"max": "1.85rem",
+						"min": "0.95rem"
 					},
 					"name": "Large",
 					"size": "1.85rem",
@@ -119,8 +117,8 @@
 				},
 				{
 					"fluid": {
-						"min": "1.85rem",
-						"max": "2.5rem"
+						"max": "2.5rem",
+						"min": "1.85rem"
 					},
 					"name": "Extra Large",
 					"size": "2.5rem",
@@ -128,69 +126,61 @@
 				},
 				{
 					"fluid": {
-						"min": "2.5rem",
-						"max": "3.27rem"
+						"max": "3.27rem",
+						"min": "2.5rem"
 					},
 					"name": "Extra Extra Large",
 					"size": "3.27rem",
 					"slug": "xx-large"
 				}
 			]
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
-		"spacing": {
-			"blockGap":"1.2rem",
-			"padding": {
-				"left":"2rem",
-				"right":"2rem"
-			}
-		},
-		"typography": {
-			"fontFamily": "var:preset|font-family|body",
-			"fontSize": "var:preset|font-size|medium",
-			"fontStyle": "normal",
-			"fontWeight": "400"
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "var:preset|font-size|xx-large",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
+					"letterSpacing": "0.1em",
 					"lineHeight": "1.15",
-					"letterSpacing":"0.1em",
-					"textTransform":"uppercase"
+					"textTransform": "uppercase"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var:preset|font-size|x-large"
+					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var:preset|font-size|large"
+					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var:preset|font-size|large",
+					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontStyle": "italic"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var:preset|font-size|medium"
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var:preset|font-size|medium",
+					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontStyle": "italics"
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|heading",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontWeight": "400"
 				}
 			},
@@ -201,13 +191,22 @@
 					}
 				},
 				"color": {
-					"text": "var:preset|color|contrast"
+					"text": "var(--wp--preset--color--contrast)"
 				}
 			}
 		},
-		"color": {
-			"background":"var:preset|color|base",
-			"text":"var:preset|color|contrast"
+		"spacing": {
+			"blockGap": "1.2rem",
+			"padding": {
+				"left": "2rem",
+				"right": "2rem"
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontStyle": "normal",
+			"fontWeight": "400"
 		}
 	},
 	"templateParts": [
@@ -221,5 +220,6 @@
 			"name": "footer",
 			"title": "Footer"
 		}
-	]
+	],
+	"version": 3
 }
