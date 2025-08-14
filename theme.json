@@ -1,9 +1,15 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
 	"settings": {
+		"useRootPaddingAwareAlignments": true,
+		"layout": {
+			"contentSize": "840px",
+			"wideSize": "1100px"
+		},
 		"color": {
-			"defaultGradients": false,
 			"defaultPalette": true,
+			"defaultGradients": false,
 			"palette": [
 				{
 					"color": "#353B3C",
@@ -32,13 +38,9 @@
 				}
 			]
 		},
-		"layout": {
-			"contentSize": "840px",
-			"wideSize": "1100px"
-		},
 		"typography": {
-			"defaultFontSizes": false,
 			"fluid": true,
+			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
 					"fontFace": [
@@ -90,8 +92,8 @@
 			"fontSizes": [
 				{
 					"fluid": {
-						"max": "0.9rem",
-						"min": "0.85rem"
+						"min": "0.85rem",
+						"max": "0.9rem"
 					},
 					"name": "Small",
 					"size": "0.9rem",
@@ -99,8 +101,8 @@
 				},
 				{
 					"fluid": {
-						"max": "0.95rem",
-						"min": "0.9rem"
+						"min": "0.9rem",
+						"max": "0.95rem"
 					},
 					"name": "Medium",
 					"size": "1.05rem",
@@ -108,8 +110,8 @@
 				},
 				{
 					"fluid": {
-						"max": "1.85rem",
-						"min": "0.95rem"
+						"min": "0.95rem",
+						"max": "1.85rem"
 					},
 					"name": "Large",
 					"size": "1.85rem",
@@ -117,8 +119,8 @@
 				},
 				{
 					"fluid": {
-						"max": "2.5rem",
-						"min": "1.85rem"
+						"min": "1.85rem",
+						"max": "2.5rem"
 					},
 					"name": "Extra Large",
 					"size": "2.5rem",
@@ -126,61 +128,69 @@
 				},
 				{
 					"fluid": {
-						"max": "3.27rem",
-						"min": "2.5rem"
+						"min": "2.5rem",
+						"max": "3.27rem"
 					},
 					"name": "Extra Extra Large",
 					"size": "3.27rem",
 					"slug": "xx-large"
 				}
 			]
-		},
-		"useRootPaddingAwareAlignments": true
+		}
 	},
 	"styles": {
-		"color": {
-			"background": "var(--wp--preset--color--base)",
-			"text": "var(--wp--preset--color--contrast)"
+		"spacing": {
+			"blockGap":"1.2rem",
+			"padding": {
+				"left":"2rem",
+				"right":"2rem"
+			}
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|body",
+			"fontSize": "var:preset|font-size|medium",
+			"fontStyle": "normal",
+			"fontWeight": "400"
 		},
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"letterSpacing": "0.1em",
+					"fontSize": "var:preset|font-size|xx-large",
 					"lineHeight": "1.15",
-					"textTransform": "uppercase"
+					"letterSpacing":"0.1em",
+					"textTransform":"uppercase"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var:preset|font-size|x-large"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)"
+					"fontSize": "var:preset|font-size|large"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)",
+					"fontSize": "var:preset|font-size|large",
 					"fontStyle": "italic"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)"
+					"fontSize": "var:preset|font-size|medium"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontSize": "var:preset|font-size|medium",
 					"fontStyle": "italics"
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontFamily": "var:preset|font-family|heading",
 					"fontWeight": "400"
 				}
 			},
@@ -191,22 +201,13 @@
 					}
 				},
 				"color": {
-					"text": "var(--wp--preset--color--contrast)"
+					"text": "var:preset|color|contrast"
 				}
 			}
 		},
-		"spacing": {
-			"blockGap": "1.2rem",
-			"padding": {
-				"left": "2rem",
-				"right": "2rem"
-			}
-		},
-		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--body)",
-			"fontSize": "var(--wp--preset--font-size--medium)",
-			"fontStyle": "normal",
-			"fontWeight": "400"
+		"color": {
+			"background":"var:preset|color|base",
+			"text":"var:preset|color|contrast"
 		}
 	},
 	"templateParts": [
@@ -220,6 +221,5 @@
 			"name": "footer",
 			"title": "Footer"
 		}
-	],
-	"version": 3
+	]
 }
